@@ -114,15 +114,8 @@ export default LoginPageElements;
 
 ## Custom Commands
 Add frequently used actions in cypress/support/commands.js
-```
-Cypress.Commands.add('login', (email, password) => {
-    cy.visit('/');
-    cy.get('.panel > .header > .authorization-link > a').click()
-    cy.get('#email').type(email);
-    cy.get('#pass').type(password);
-    cy.get('#send2').click();
-});
-```
+![image](https://github.com/user-attachments/assets/be621631-17e0-4129-9c7c-075c93c1e71f)
+
 Example usage in a test
 ![image](https://github.com/user-attachments/assets/290cb702-fb3b-4328-98a4-f1da144c4445)
 
