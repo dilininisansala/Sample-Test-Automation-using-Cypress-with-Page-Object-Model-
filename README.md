@@ -19,3 +19,18 @@ Inside the cypress/e2e directory, create test files for each functionality:
 * loginPage.cy.js
 * productPage.cy.js
 * checkoutPage.cy.js
+
+## Execute Tests
+Run in Cypress GUI
+```
+npx cypress open
+```
+Run in Headless Mode
+```
+npx cypress run
+```
+
+
+
+
+
