@@ -22,7 +22,7 @@ Inside the cypress/e2e directory, create test files for each functionality:
 * checkoutPage.cy.js
 
 ## Write Tests Using Page Classes
-#### Login Test (cypress/e2e/tests/loginPage.cy.js)
+#### Example: Login Test (cypress/e2e/tests/loginPage.cy.js)
 ```
 /// <reference types="cypress" />
 import LoginPage from "../pageObjects/pageActions/LoginActions";
