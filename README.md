@@ -75,6 +75,40 @@ describe('Login Functionality', () => {
     })
 })
 ```
+#### LoginAction.js
+You can then modify your LoginAction.js to import and use LoginPageElements
+```
+import LoginPageElements from "../pageElements/LoginPageElements";
+
+class LoginPage {
+
+    typeUsername(username) {
+        cy.get(LoginPageElements.txtUsername).type(username)
+    }
+
+    typePassword(password) {
+        cy.get(LoginPageElements.txtPassword).type(password)
+    }
+
+    clickSubmit() {
+        cy.get(LoginPageElements.btnSubmit).click()
+    }
+
+}
+export default new LoginPage();
+```
+#### LoginPageElements.js
+LoginPageElements.js file would typically contain the locators for the elements on the login page. If locators change, you only need to update them in one place (LoginPageElements.js)
+```
+const LoginPageElements = {
+
+    txtUsername: '#email',
+    txtPassword: '.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .password > .control > #pass',
+    btnSubmit: '.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2'
+};
+
+export default LoginPageElements;
+```
 
 ## Custom Commands
 Add frequently used actions in cypress/support/commands.js
