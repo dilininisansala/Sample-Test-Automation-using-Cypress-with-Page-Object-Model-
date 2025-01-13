@@ -109,6 +109,8 @@ const LoginPageElements = {
 
 export default LoginPageElements;
 ```
+## Update cypress.config.js
+![image](https://github.com/user-attachments/assets/d498a66d-49c6-4a1c-83a5-d6d28eadd30c)
 
 ## Custom Commands
 Add frequently used actions in cypress/support/commands.js
