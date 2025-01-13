@@ -24,9 +24,9 @@ Inside the cypress/e2e directory, create test files for each functionality:
 
 ## Write Tests Using Page Classes
 Keeping page elements, actions, and tests in separate files follows a Page Object Model (POM) design pattern, which is a best practice in test automation.
-**Page Elements:** Contains only selectors for web elements. No logic or actions.
-**Actions:** Encapsulates user actions like clicking, typing, or verifying elements. It uses the selectors from the Page Elements file.
-**Tests:** Focuses on defining test scenarios, ensuring that business logic is separated from implementation details.
+* **Page Elements:** Contains only selectors for web elements. No logic or actions.
+* **Actions:** Encapsulates user actions like clicking, typing, or verifying elements. It uses the selectors from the Page Elements file.
+* **Tests:** Focuses on defining test scenarios, ensuring that business logic is separated from implementation details.
 
 #### Example: Login Test (cypress/e2e/tests/loginPage.cy.js)
 This is the test file where you write the Cypress tests. It uses methods from LoginActions.js to interact with the login page and validate behavior. 
