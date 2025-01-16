@@ -132,3 +132,7 @@ Run in Headless Mode
 ```
 npx cypress run
 ```
+## Videos
+loginPage.cy.js
+https://github.com/user-attachments/assets/81434bcd-3eb3-498a-8222-a50a7605acec
+
