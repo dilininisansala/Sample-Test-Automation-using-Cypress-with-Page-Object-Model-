@@ -132,8 +132,4 @@ Run in Headless Mode
 ```
 npx cypress run
 ```
-## Videos
-loginPage.cy.js
-<video width="800" controls>
-  <source src="loginpage.mp4" type="video/mp4">
-</video>
+
