@@ -34,51 +34,48 @@ This is the test file where you write the Cypress tests. It uses methods from Lo
 /// <reference types="cypress" />
 import LoginPage from "../pageObjects/pageActions/LoginActions";
 
-
 describe('Login Functionality', () => {
+    let loginData;
+
+    // Load the fixture data before the tests
+    before(() => {
+        cy.fixture('loginUserData').then((data) => {
+            loginData = data;
+        });
+    });
+
     beforeEach(() => {
         cy.visit('/customer/account/login')
     });
 
-    // Positive Test Case: Login with valid credentials
     it('should log in successfully with valid credentials', () => {
-        LoginPage.typeUsername('sebastianbeck66@example.com')
-        LoginPage.typePassword('Abcd123#$%')
+        LoginPage.typeUsername(loginData.validUser.email)
+        LoginPage.typePassword(loginData.validUser.password)
         LoginPage.clickSubmit()
-
         cy.get(':nth-child(2) > .greet > .logged-in')
             .should('be.visible')
             .and('have.class', 'logged-in')
     })
 
-    // Negative Test Case: Invalid email
     it('should display an error for an invalid email', () => {
-        LoginPage.typeUsername('sebastian@example.com')
-        LoginPage.typePassword('Abcd123#$%')
+        LoginPage.typeUsername(loginData.invalidEmail)
+        LoginPage.typePassword(loginData.validUser.password)
         LoginPage.clickSubmit()
-
-        // Verify that the error message is shown
-        cy.contains('The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.').should('be.visible')
+        cy.contains(loginData.loginError)
+            .should('be.visible')
     })
 
-    // Negative Test Case: Invalid Password
     it('should display an error for an invalid password', () => {
-        LoginPage.typeUsername('sebastianbeck1@example.com')
-        LoginPage.typePassword('Abcd123')
+        LoginPage.typeUsername(loginData.validUser.email)
+        LoginPage.typePassword(loginData.invalidPassword)
         LoginPage.clickSubmit()
-
-        // Verify that the error message is shown
-        cy.contains('The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.').should('be.visible')
+        cy.contains(loginData.loginError)
+            .should('be.visible')
     })
 
-    // Negative Test Case: Empty Fields
     it('should display an error when fields are left empty', () => {
-        // Click the Login button without entering any data
-        cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2').click()
-
-        // Assert that the error message appears
-        cy.contains('This is a required field.').should('be.visible')
-        // cy.contains('A login and a password are required.').should('be.visible')
+        LoginPage.clickSubmit()
+        cy.contains(loginData.emptyFieldsError).should('be.visible')
     })
 })
 ```
@@ -110,8 +107,8 @@ LoginPageElements.js file would typically contain the locators for the elements 
 const LoginPageElements = {
 
     txtUsername: '#email',
-    txtPassword: '.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .password > .control > #pass',
-    btnSubmit: '.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2'
+    txtPassword: '#pass',
+    btnSubmit: '#send2'
 };
 
 export default LoginPageElements;
