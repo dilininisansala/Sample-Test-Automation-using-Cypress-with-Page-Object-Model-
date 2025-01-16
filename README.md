@@ -13,7 +13,7 @@ npx cypress open
 
 ## Directory Structure with POM
 Organize the project directory for POM
-![Screenshot 2025-01-13 165117](https://github.com/user-attachments/assets/87f9d028-83e5-4330-8a8d-c993fb8bd322)
+![image](https://github.com/user-attachments/assets/b17cda47-7ba3-4cd0-81d8-ba259920f2eb)
 
 ## Write and Organize Tests
 Inside the cypress/e2e directory, create test files for each functionality:
