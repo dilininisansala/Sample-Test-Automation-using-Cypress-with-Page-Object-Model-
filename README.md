@@ -128,8 +128,11 @@ Run in Cypress GUI
 ```
 npx cypress open
 ```
+![image](https://github.com/user-attachments/assets/91e211a8-f0e3-4c18-a8fd-44b70d9c3cd6)
+
 Run in Headless Mode
 ```
 npx cypress run
 ```
+![image](https://github.com/user-attachments/assets/9623923c-90f4-4bdf-b7f3-db32a59dc56a)
 
