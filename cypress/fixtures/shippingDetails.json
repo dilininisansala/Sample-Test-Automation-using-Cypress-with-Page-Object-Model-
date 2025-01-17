@@ -1,0 +1,11 @@
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "company": "Acme Corp",
+    "address": "123 Main Street",
+    "city": "San Francisco",
+    "state": "California",
+    "zip": "94105",
+    "country": "United States",
+    "phone": "5551234567"
+}

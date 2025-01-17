@@ -1,0 +1,17 @@
+# Node.js modules
+node_modules/
+
+# Cypress output files
+cypress/screenshots/
+
+# Cypress environment file
+cypress.env.json
+
+# Logs and temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDE or editor configurations
+.vscode/

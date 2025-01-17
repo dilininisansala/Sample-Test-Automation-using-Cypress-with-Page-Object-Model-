@@ -1,0 +1,11 @@
+{
+    "validUser": {
+        "email": "sebastianbeck66@example.com",
+        "password": "Abcd123#$%"
+    },
+    "invalidEmail": "sebastian@example.com",
+    "invalidPassword": "Abcd123",
+    "emptyFieldsError": "This is a required field.",
+    "emptyFieldsError2": "A login and a password are required.",
+    "loginError": "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."
+}

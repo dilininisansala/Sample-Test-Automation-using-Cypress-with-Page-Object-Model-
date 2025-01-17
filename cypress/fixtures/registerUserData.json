@@ -1,0 +1,11 @@
+{
+    "validUser": {
+        "firstName": "Sebastian",
+        "lastName": "Beck",
+        "email": "sebastianbeck103@example.com",
+        "password": "Abcd123#$%",
+        "confirmpassword": "Abcd123#$%"
+    },
+    "invalidEmail": "sebastianbecks@example.x",
+    "duplicateEmail": "sebastianbeck1@example.com"
+}
